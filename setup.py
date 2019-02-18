@@ -12,7 +12,7 @@ import setuptools
 # from ._version import VERSION as __version__
 
 # pylint: disable=locally-disabled, C0103
-with open("README.md", "r") as fh:
+with open("Readme.md", "r") as fh:
     long_description = fh.read()
 # pylint: enable=locally-disabled, C0103
 
