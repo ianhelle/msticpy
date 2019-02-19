@@ -16,7 +16,7 @@ with open("Readme.md", "r") as fh:
     long_description = fh.read()
 # pylint: enable=locally-disabled, C0103
 
-with open("_version.py", "r") as fd:
+with open("msticpy/_version.py", "r") as fd:
     __version__ = re.search(r'^VERSION\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE).group(1)
 
 setuptools.setup(
@@ -31,7 +31,7 @@ setuptools.setup(
     python_requires='>=3.6',
     packages=setuptools.find_packages(exclude=['notebookext', 'notebooks',
                                                'miscnotebooks', 'msticpy/doc',
-                                               'mstipy/tests']),
+                                               'mstcipy/tests']),
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "License :: OSI Approved :: MIT License",
