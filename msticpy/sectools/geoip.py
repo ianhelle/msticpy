@@ -20,6 +20,10 @@ import requests
 
 from .. asitools.entityschema import GeoLocation, IpAddress
 from .. asitools.utility import export
+from .. _version import VERSION
+
+__version__ = VERSION
+__author__ = 'Ian Hellen'
 
 
 class GeoIpLookup(ABC):

@@ -4,20 +4,19 @@
 # license information.
 # --------------------------------------------------------------------------
 """query_schema test class."""
-import sys
 import unittest
 
-import pandas as pd
-
 from .. asitools.query_schema import DataSchema
-from .. asitools.query_defns import KqlQuery, QueryParamProvider, DataFamily, DataEnvironment
+from .. asitools.query_defns import DataFamily, DataEnvironment
 
 
 class TestQuerySchema(unittest.TestCase):
-
+    """Unit test class."""
     def setUp(self):
-        self.schema = DataSchema(environment='LogAnalytics', data_family='WindowsSecurity', data_source='process_create')
-    
+        self.schema = DataSchema(environment='LogAnalytics', 
+                                 data_family='WindowsSecurity', 
+                                 data_source='process_create')
+
     def test_global_properties(self):
         self.assertGreaterEqual(len(self.schema.data_environments), 2)
         self.assertGreaterEqual(len(self.schema.data_families), 2)
@@ -31,7 +30,6 @@ class TestQuerySchema(unittest.TestCase):
             if src == 'security_alert':
                 self.assertGreaterEqual(len(schema['query_project'].split(',')), 23)
                 self.assertEqual(schema['table'], 'SecurityAlert')
-            
 
     def test_WindowsSecurity(self):
         for src in ['process_create', 'account_logon']:
@@ -44,7 +42,7 @@ class TestQuerySchema(unittest.TestCase):
             elif src == 'account_logon':
                 self.assertGreaterEqual(len(schema['query_project'].split(',')), 19)
                 self.assertEqual(schema['table'], 'SecurityEvent | where EventID == 4624')
-            
+
     def test_LinuxSecurity(self):
         for src in ['process_create', 'account_logon']:
             schema = DataSchema(environment='LogAnalytics', data_family='LinuxSecurity', data_source=src)

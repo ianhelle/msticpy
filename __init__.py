@@ -7,5 +7,5 @@
 
 # flake8: noqa: F403
 from ._version import VERSION as __version__
-from . asitools import *
-from . sectools import *
+from . msticpy.asitools import *
+from . msticpy.sectools import *

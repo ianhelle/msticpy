@@ -153,7 +153,7 @@ class IoCExtract(object):
             columns {list} -- The list of columns to use as source strings,
                 if the data parameter is used.  (default: {None})
             os_family {str} -- 'Linux' or 'Windows' (default: {'Windows'})
-            ioc_types {list({str})} -- Restrict matching to just specified 
+            ioc_types {list({str})} -- Restrict matching to just specified
                 types (default: {None})
 
 

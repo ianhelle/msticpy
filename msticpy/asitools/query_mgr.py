@@ -92,7 +92,11 @@ def add_query(kql_query: KqlQuery = None, **kwargs):
                              data_environments=kwargs.get('data_environments',
                                                           def_data_environments))
     query_definitions[kql_query.name] = kql_query
-    _add_queries_to_module('msticpy.asitools.query_builtin_queries')
+    _add_queries_to_module(__name__)
+
+    kql_modules = [m for m in sys.modules.keys() if m.endswith('msticpy.asitools.kql')]
+    if len(kql_modules) == 1:
+        _add_queries_to_module(kql_modules[0])
 
 
 @export
@@ -333,4 +337,4 @@ def _add_queries_to_module(module_name):
 
 
 # Add all queries defined in builtin queries module as functions
-_add_queries_to_module('msticpy.asitools.query_builtin_queries')
+_add_queries_to_module(__name__)

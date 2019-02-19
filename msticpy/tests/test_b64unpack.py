@@ -6,11 +6,12 @@
 """Base64unpack test class."""
 import unittest
 import pandas as pd
+
 from .. sectools import base64unpack as b64
 
 
 class TestB64Unpack(unittest.TestCase):
-
+    """Unit test class."""
     def test_archive_string(self):
         try:
             input_txt = None
@@ -22,7 +23,7 @@ class TestB64Unpack(unittest.TestCase):
 
             result_str, result_df = b64.unpack_items(input_string=input_txt, trace=True)
             print(result_str)
-            #assert result_df.shape == (2, 12)
+            # assert result_df.shape == (2, 12)
             self.assertIsNotNone(result_str)
             self.assertIsNotNone(result_df)
 
@@ -65,6 +66,7 @@ class TestB64Unpack(unittest.TestCase):
 
         except FileNotFoundError as ex:
             self.fail(msg='Exception {}'.format(str(ex)))
+
 
 if __name__ == '__main__':
     unittest.main()

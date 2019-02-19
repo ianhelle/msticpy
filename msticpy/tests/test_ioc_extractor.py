@@ -1,4 +1,4 @@
-import sys
+
 import unittest
 
 import pandas as pd
@@ -22,7 +22,7 @@ TEST_CASES = {
 
 
 class TestIoCExtractor(unittest.TestCase):
-
+    """Unit test class."""
     def __run_extract(self, extractor=None, testcase=None, expected_items=None,
                       os_family='Windows'):
         if extractor is None or testcase is None or expected_items is None:
