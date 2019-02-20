@@ -6,6 +6,6 @@
 """__init__ for mstic.py package."""
 
 # flake8: noqa: F403
-from ._version import VERSION as __version__
-from . msticpy.asitools import *
+from . msticpy._version import VERSION as __version__
+from . msticpy.nbtools import *
 from . msticpy.sectools import *

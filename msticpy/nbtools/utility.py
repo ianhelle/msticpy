@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for
 # license information.
 # --------------------------------------------------------------------------
-"""Miscellaneous helper methods for ASI Notebooks."""
+"""Miscellaneous helper methods for Jupyter Notebooks."""
 import re
 import sys
 from IPython.core.display import display, HTML

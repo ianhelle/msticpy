@@ -20,7 +20,7 @@ import pandas as pd
 from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import Normalizer
 
-from .. asitools.utility import export, pd_version_23
+from .. nbtools.utility import export, pd_version_23
 from .. _version import VERSION
 
 __version__ = VERSION

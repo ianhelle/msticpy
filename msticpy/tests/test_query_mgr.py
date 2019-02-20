@@ -7,10 +7,10 @@
 import unittest
 from datetime import datetime
 
-from .. asitools import query_builtin_queries as queries
-from .. asitools import kql
-from .. asitools.query_mgr import replace_query_params, add_query, required_params
-from .. asitools.query_defns import DataFamily, DataEnvironment, KqlQuery, QueryParamProvider
+from .. nbtools import query_builtin_queries as queries
+from .. nbtools import kql
+from .. nbtools.query_mgr import replace_query_params, add_query, required_params
+from .. nbtools.query_defns import DataFamily, DataEnvironment, KqlQuery, QueryParamProvider
 
 
 class QPTest(QueryParamProvider):

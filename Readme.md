@@ -1,4 +1,4 @@
-# MSTIC ASI Jupyter and Python Repo
+# MSTIC Jupyter and Python Security Tools
 
 Microsoft Threat Intelligence Python Security Package:
 
@@ -59,11 +59,11 @@ individal host names and guids.
 This is an unsupervised learning module implemented using SciKit Learn DBScan.
 [EventClustering Notebook](./doc/EventClustering.ipynb)
 
-## asitools
+## nbtools
 This is a collection of data access, display and utility modules 
 designed to make working with Log Analytics data in Jupyter notebooks 
 quicker and easier.
-- asiwidgets - groups common functionality such as list pickers, 
+- nbwidgets - groups common functionality such as list pickers, 
 time boundary settings, saving and retrieving
 environment variables into a single line callable command.
 - nbdisplay - functions that implement common display of things like 

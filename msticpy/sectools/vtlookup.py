@@ -18,7 +18,7 @@ from urllib3.exceptions import LocationParseError
 from urllib3.util import parse_url
 
 from . iocextract import IoCExtract
-from .. asitools.utility import export, pd_version_23
+from .. nbtools.utility import export, pd_version_23
 from .. _version import VERSION
 
 __version__ = VERSION

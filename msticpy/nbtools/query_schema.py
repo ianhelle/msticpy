@@ -19,7 +19,7 @@ __author__ = 'Ian Hellen'
 # TODO Refactor to simpler data structure
 @export
 class DataSchema:
-    """DataSchema class for ASI Log Analytics Queries."""
+    """DataSchema class for Log Analytics Queries."""
 
     DATA_MAPPINGS = {DataEnvironment.LogAnalytics: {},
                      DataEnvironment.Kusto: {}}

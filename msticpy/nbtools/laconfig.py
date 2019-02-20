@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for
 # license information.
 # --------------------------------------------------------------------------
-"""Module for ASI-related configuration."""
+"""Module for Log Analytics-related configuration."""
 
 import json
 from .utility import export

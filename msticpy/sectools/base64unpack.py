@@ -36,7 +36,7 @@ from collections import namedtuple
 
 import pandas as pd
 
-from .. asitools.utility import pd_version_23, export
+from .. nbtools.utility import pd_version_23, export
 from .. _version import VERSION
 
 __version__ = VERSION

@@ -3,12 +3,12 @@
 # Licensed under the MIT License. See License.txt in the project root for
 # license information.
 # --------------------------------------------------------------------------
-"""ASI Security Tools."""
+"""Jupyter Notebook Security Tools."""
 # flake8: noqa: F403
 
 # pylint: disable=W0401
 from . import query_builtin_queries
-from . asiwidgets import *
+from . nbwidgets import *
 from . entityschema import *
 from . import kql as qry
 from . security_alert import *

@@ -6,8 +6,8 @@
 """query_schema test class."""
 import unittest
 
-from .. asitools.query_schema import DataSchema
-from .. asitools.query_defns import DataFamily, DataEnvironment
+from .. nbtools.query_schema import DataSchema
+from .. nbtools.query_defns import DataFamily, DataEnvironment
 
 
 class TestQuerySchema(unittest.TestCase):

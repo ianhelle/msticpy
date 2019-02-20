@@ -7,15 +7,15 @@
 import unittest
 import json
 
-# from .. asitools import query_builtin_queries as queries
-# from .. asitools.query_mgr import replace_query_params, add_query
-# from .. asitools.query_defns import DataFamily, DataEnvironment, KqlQuery
-from .. asitools.entityschema import Entity, Account, Host, Process, File, IpAddress
+# from .. nbtools import query_builtin_queries as queries
+# from .. nbtools.query_mgr import replace_query_params, add_query
+# from .. nbtools.query_defns import DataFamily, DataEnvironment, KqlQuery
+from .. nbtools.entityschema import Entity, Account, Host, Process, File, IpAddress
 
 
-class TestASITools(unittest.TestCase):
+class Testnbtools(unittest.TestCase):
     """Unit test class."""
-    
+
     def entity_creation(self):
         try:
             file = './msticpy/tests/testdata/entities.json'

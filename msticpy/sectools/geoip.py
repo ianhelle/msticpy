@@ -18,8 +18,8 @@ from geolite2 import geolite2
 import pandas as pd
 import requests
 
-from .. asitools.entityschema import GeoLocation, IpAddress
-from .. asitools.utility import export
+from .. nbtools.entityschema import GeoLocation, IpAddress
+from .. nbtools.utility import export
 from .. _version import VERSION
 
 __version__ = VERSION

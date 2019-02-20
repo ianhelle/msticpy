@@ -10,7 +10,7 @@ from collections import namedtuple, defaultdict
 from urllib.parse import unquote
 
 import pandas as pd
-from .. asitools.utility import export
+from .. nbtools.utility import export
 from .. _version import VERSION
 
 __version__ = VERSION
