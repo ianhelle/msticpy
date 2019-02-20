@@ -35,7 +35,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    extras_require={
+    install_requires={
         "matplotlib": ["matplotlib>=3.0.2"],
         "bokeh": ["bokeh>=1.0.2"],
         "setuptools": ["setuptools>=40.6.3"],
