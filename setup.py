@@ -29,9 +29,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://https://github.com/ianhelle/msyticpy",
     python_requires='>=3.6',
-    packages=setuptools.find_packages(exclude=['notebookext', 'notebooks',
-                                               'miscnotebooks', 'msticpy/doc',
-                                               'mstcipy/tests']),
+    packages=setuptools.find_packages(exclude=['*.tests']),
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "License :: OSI Approved :: MIT License",
