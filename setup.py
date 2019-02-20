@@ -9,7 +9,22 @@ import re
 
 import setuptools
 
-# from ._version import VERSION as __version__
+INSTALL_REQUIRES = ['matplotlib>=3.0.2',
+                    'bokeh>=1.0.2',
+                    'setuptools>=40.6.3',
+                    'attrs>=18.2.0',
+                    'pandas>=0.22.0',
+                    'requests>=2.21.0',
+                    'networkx>=2.2',
+                    'numpy>=1.15.4',
+                    'urllib3>=1.24.1',
+                    'ipywidgets>=7.4.2',
+                    'ipython>=7.2.0',
+                    'Kqlmagic>=0.1.90',
+                    'attr>=0.3.1',
+                    'scikit_learn>=0.20.2',
+                    'maxminddb_geolite2>=2018.0',
+                    'typing>=3.6.6']
 
 # pylint: disable=locally-disabled, C0103
 with open("Readme.md", "r") as fh:
@@ -17,7 +32,8 @@ with open("Readme.md", "r") as fh:
 # pylint: enable=locally-disabled, C0103
 
 with open("msticpy/_version.py", "r") as fd:
-    __version__ = re.search(r'^VERSION\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE).group(1)
+    __version__ = re.search(
+        r'^VERSION\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE).group(1)
 
 setuptools.setup(
     name="msticpy",
@@ -35,22 +51,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires={
-        "matplotlib": ["matplotlib>=3.0.2"],
-        "bokeh": ["bokeh>=1.0.2"],
-        "setuptools": ["setuptools>=40.6.3"],
-        "attrs": ["attrs>=18.2.0"],
-        "pandas": ["pandas>=0.22.0"],
-        "requests": ["requests>=2.21.0"],
-        "networkx": ["networkx>=2.2"],
-        "numpy": ["numpy>=1.15.4"],
-        "urllib3": ["urllib3>=1.24.1"],
-        "ipywidgets": ["ipywidgets>=7.4.2"],
-        "ipython": ["ipython>=7.2.0"],
-        "Kqlmagic": ["Kqlmagic>=0.1.90"],
-        "attr": ["attr>=0.3.1"],
-        "scikit_learn": ["scikit_learn>=0.20.2"],
-        "maxminddb_geolite2": ["maxminddb_geolite2>=2018.0"],
-        "typing": ["typing>=3.6.6"]
-    }
+    install_requires=INSTALL_REQUIRES
 )
