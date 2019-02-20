@@ -5,9 +5,19 @@
 # --------------------------------------------------------------------------
 """Base64unpack test class."""
 import unittest
+import os
+from os import path
 import pandas as pd
 
 from .. sectools import base64unpack as b64
+
+
+
+_test_data_folders = [d for d, _, _ in os.walk(os.getcwd()) if d.endswith('\\tests\\testdata')]
+if len(_test_data_folders) == 1:
+    _TEST_DATA = _test_data_folders[0]
+else:
+    _TEST_DATA = '.\\tests\\testdata'
 
 
 class TestB64Unpack(unittest.TestCase):
@@ -15,7 +25,7 @@ class TestB64Unpack(unittest.TestCase):
     def test_archive_string(self):
         try:
             input_txt = None
-            FILE_NAME = 'msticpy/tests/testdata/b64text_inzip.txt'
+            FILE_NAME = path.join(_TEST_DATA, 'b64text_inzip.txt')
             with open(FILE_NAME, 'r') as f_handle:
                 input_txt = f_handle.read()
 
@@ -33,7 +43,7 @@ class TestB64Unpack(unittest.TestCase):
     def test_nested_archive(self):
         try:
             input_txt = None
-            FILE_NAME = 'msticpy/tests/testdata/base64msg.txt'
+            FILE_NAME = path.join(_TEST_DATA, 'base64msg.txt')
             with open(FILE_NAME, 'r') as f_handle:
                 input_txt = f_handle.read()
 
@@ -50,7 +60,7 @@ class TestB64Unpack(unittest.TestCase):
     def test_nested_archive_df(self):
         try:
             input_txt = None
-            FILE_NAME = 'msticpy/tests/testdata/base64msg.txt'
+            FILE_NAME = path.join(_TEST_DATA, 'base64msg.txt')
             with open(FILE_NAME, 'r') as f_handle:
                 input_txt = f_handle.read()
 
