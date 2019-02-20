@@ -16,7 +16,7 @@ from typing import Callable
 import pandas as pd
 from IPython.display import display
 import ipywidgets as widgets
-from ipywidgets import Layout, interactive
+from ipywidgets import Layout
 
 from . import kql as qry
 from .query_defns import QueryParamProvider

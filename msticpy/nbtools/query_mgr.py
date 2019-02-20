@@ -94,7 +94,7 @@ def add_query(kql_query: KqlQuery = None, **kwargs):
     query_definitions[kql_query.name] = kql_query
     _add_queries_to_module(__name__)
 
-    kql_modules = [m for m in sys.modules.keys() if m.endswith('msticpy.nbtools.kql')]
+    kql_modules = [m.key for m in sys.modules if m.key.endswith('msticpy.nbtools.kql')]
     if len(kql_modules) == 1:
         _add_queries_to_module(kql_modules[0])
 

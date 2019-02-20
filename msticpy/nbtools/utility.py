@@ -123,7 +123,7 @@ def get_nb_query_param(nb_url_search: str, param: str) -> str:
 @export
 def get_nb_query_params(nb_url_search: str) -> dict:
     """
-    Gets the url query parameters from the search string.
+    Get the url query parameters from the search string.
 
     Arguments:
         nb_url_search {str} -- The URL search string

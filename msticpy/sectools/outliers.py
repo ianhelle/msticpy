@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for
 # license information.
 # --------------------------------------------------------------------------
-"""Outlier detection class."""
+"""Outlier detection class. TODO **Preliminary**."""
 
 import math
 
@@ -17,8 +17,21 @@ from .. _version import VERSION
 __version__ = VERSION
 __author__ = 'Ian Hellen'
 
+# pylint: disable=all
+# noqa
 
-def identify_outliers(X, X_predict=None, contamination=0.05):
+
+def identify_outliers(X: np.array, X_predict: np.Array = None, contamination: float = 0.05):
+    """
+    Identify outlier items using SkLearn IsolationForest.
+
+    Arguments:
+        X {[np.array]} -- Input data
+
+    Keyword Arguments:
+        X_predict {[np.array]} -- Model (default: {None})
+        contamination {float} -- Percentage contamination (default: {0.05})
+    """
     rng = np.random.RandomState(42)
 
     # fit the model
@@ -36,7 +49,20 @@ def identify_outliers(X, X_predict=None, contamination=0.05):
     return clf, X_outliers, y_pred_outliers
 
 
-def plot_outlier_results(clf, X, X_predict, X_outliers, feature_columns, plt_title):
+def plot_outlier_results(clf: IsolationForest, X: np.array,
+                         X_predict: np.array, X_outliers: np.array,
+                         feature_columns: list({int}), plt_title: str):
+    """
+    Plot Isolation Forest results.
+
+    Arguments:
+        clf {IsolationForest} -- Isolation Forest model
+        X {np.array} -- Input data
+        X_predict {np.array} -- Prediction
+        X_outliers {np.array} -- Set of outliers
+        feature_columns {list} -- list of feature columns to display
+        plt_title {str} -- Title
+    """
     # plot the line, the samples, and the nearest vectors to the plane
     x_max_x = X[:, 0].max() + (X[:, 0].max() / 10)
     x_min_x = - X[:, 0].max() / 10

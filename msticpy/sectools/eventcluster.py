@@ -231,9 +231,9 @@ def add_process_features(input_frame, path_separator=None, force=False):
                                                              if x.commandlineLen else 0, axis=1)
         if 'commandlineTokensFull' not in output_df or force:
             delim_rgx = r'[\s\-\\/\.,"\'|&:;%$()]'
-            output_df['commandlineTokensFull'] = output_df[['CommandLine']].apply(lambda x:
-                                                                                  x.str.count(delim_rgx),
-                                                                                  axis=1)
+            output_df['commandlineTokensFull'] = (output_df[['CommandLine']]
+                                                  .apply(lambda x: x.str.count(delim_rgx),
+                                                         axis=1))
 
         if 'commandlineScore' not in output_df or force:
             output_df['commandlineScore'] = output_df.apply(lambda x:
