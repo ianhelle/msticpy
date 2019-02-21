@@ -50,21 +50,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires={
-        "matplotlib": ["matplotlib>=3.0.0"],
-        "bokeh": ["bokeh>=1.0.2"],
-        "setuptools": ["setuptools>=40.6.2"],
-        "attrs": ["attrs>=18.2.0"],
-        "pandas": ["pandas>=0.23.0"],
-        "requests": ["requests>=2.20.1"],
-        "networkx": ["networkx>=2.2"],
-        "numpy": ["numpy>=1.15.4"],
-        "urllib3": ["urllib3>=1.24.1"],
-        "ipywidgets": ["ipywidgets>=7.3"],
-        "ipython": ["ipython>=7.2.0"],
-        "Kqlmagic": ["Kqlmagic>=0.1.90"],
-        "scikit_learn": ["scikit_learn>=0.20.2"],
-        "maxminddb_geolite2": ["maxminddb_geolite2>=2018.0"],
-        "typing": ["typing>=3.6.6"]
-    }
+    install_requires=INSTALL_REQUIRES
 )
