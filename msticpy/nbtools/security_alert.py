@@ -102,6 +102,8 @@ class SecurityAlert(SecurityBase):
         we replace the original property with a reference to the entity in the dictionary
         """
         for _, entity in self._src_entities.items():
+            if not isinstance(entity, Entity):
+                continue
             for prop_name, prop_val in entity.properties.items():
                 if isinstance(prop_val, dict) and '$ref' in prop_val:
                     entity_id = prop_val['$ref']
