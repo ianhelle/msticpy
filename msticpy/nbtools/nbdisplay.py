@@ -52,7 +52,7 @@ def display_alert(alert=None, show_entities=False):
             '''.format(start=alert['StartTimeUtc'],
                        name=alert['AlertDisplayName'],
                        entity=entity,
-                       id=alert['ProviderAlertId'])
+                       id=alert['SystemAlertId'])
         display(HTML(title))
         display(pd.DataFrame(alert))
     else:
