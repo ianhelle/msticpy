@@ -408,10 +408,10 @@ def _print_sid_info(sid):
 
 
 @export
-def plot_cluster(db_cluster, data, X, plot_label=None, plot_features=[0, 1], verbose=False, 
+def plot_cluster(db_cluster, data, X, plot_label=None, plot_features=[0, 1], verbose=False,
                  cut_off=3, xlabel=None, ylabel=None):
     """
-    [summary]
+    Plot clustered data as scatter chart
 
     Arguments:
         db_cluster {[type]} -- DBScan Cluster (from SkLearn DBSCAN)

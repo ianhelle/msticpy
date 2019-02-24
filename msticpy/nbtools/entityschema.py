@@ -545,6 +545,7 @@ class IpAddress(Entity):
         'ThreatIntelligence': None
     }
 
+
 @export
 class GeoLocation(Entity):
     """GeoLocation class."""
