@@ -12,6 +12,7 @@ import os
 from abc import ABC, abstractmethod
 from collections.abc import Iterable
 from datetime import datetime, timedelta
+from typing import Tuple
 from IPython import get_ipython
 from IPython.display import display, HTML
 
@@ -271,8 +272,8 @@ else:
     display(HTML(_IPSTACK_LICENSE_HTML))
 
 
-def geo_distance(origin: tuple({float}, {float}),
-                 destination: tuple({float}, {float})) -> float:
+def geo_distance(origin: Tuple[float, float],
+                 destination: Tuple[float, float]) -> float:
     """
     Calculate the Haversine distance.
 
@@ -295,7 +296,7 @@ def geo_distance(origin: tuple({float}, {float}),
     >>> destination = (52.5186, 13.4083)  # Berlin
     >>> round(distance(origin, destination), 1)
     504.2
-    
+
     """
     orig_lat, orig_lon = origin
     dest_lat, dest_lon = destination
